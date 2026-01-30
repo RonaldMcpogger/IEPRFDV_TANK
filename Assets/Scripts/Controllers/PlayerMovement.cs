@@ -21,4 +21,5 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(dir);
         rb.AddForce(dir * speed);
     }
+   
 }
