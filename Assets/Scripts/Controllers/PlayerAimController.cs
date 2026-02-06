@@ -2,17 +2,20 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerAimController : MonoBehaviour
 {
-    Vector2 aimDir;
-    Vector2 worldPos;
     [SerializeField] private GameObject Turret;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private float angleOffset; // New serialized field for angle offset
  
-    // Update is called once per frame
+
     void Update()
     {
-        this.worldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        Debug.Log(this.worldPos);
-        this.aimDir = (this.worldPos - (Vector2)Turret.transform.position).normalized;
-        Turret.transform.up = this.aimDir;
+        // Early exit if Camera.main or Turret is not assigned
+        if (Camera.main == null || Turret == null) return;
+
+        Vector2 mousePosition = Mouse.current.position.ReadValue();
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector2 aimDir = (worldPos - (Vector2)Turret.transform.position).normalized;
+
+        Turret.transform.up = aimDir; // Set the turret's up direction to the aim direction
+
     }
 }
