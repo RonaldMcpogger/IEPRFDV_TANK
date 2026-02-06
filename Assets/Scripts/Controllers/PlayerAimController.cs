@@ -11,7 +11,7 @@ public class PlayerAimController : MonoBehaviour
     void Update()
     {
         this.worldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        Debug.Log(this.worldPos);
+        //Debug.Log(this.worldPos);
         this.aimDir = (this.worldPos - (Vector2)Turret.transform.position).normalized;
         Turret.transform.up = this.aimDir;
     }

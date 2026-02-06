@@ -538,8 +538,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 5.6
+  maxSpeed: 15
   moveAction: {fileID: 1309726373}
   rb: {fileID: 1945194734}
+  slide: 0
+  tankSprite: {fileID: 1381428376}
+  maxCountdown: 2
 --- !u!50 &1945194734
 Rigidbody2D:
   serializedVersion: 5
