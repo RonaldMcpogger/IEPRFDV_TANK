@@ -4,7 +4,8 @@ public class PlayerAimController : MonoBehaviour
 {
     [SerializeField] private GameObject Turret;
     [SerializeField] private float angleOffset; // New serialized field for angle offset
- 
+    private float speed;
+    float lastAngle;
 
     void Update()
     {
@@ -16,6 +17,12 @@ public class PlayerAimController : MonoBehaviour
         Vector2 aimDir = (worldPos - (Vector2)Turret.transform.position).normalized;
 
         Turret.transform.up = aimDir; // Set the turret's up direction to the aim direction
+        speed = (aimDir.y - lastAngle)/Time.deltaTime;
+        lastAngle = aimDir.y;
+    }
 
+    public float getSpeed()
+    {
+               return speed;
     }
 }
