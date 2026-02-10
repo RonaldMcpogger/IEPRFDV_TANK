@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public InputActionReference moveAction;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float rotationSpeed = 0f;
+    public float tankSpeed = 0.0f;
     
     private float targetAngle;
 
@@ -24,8 +25,10 @@ public class PlayerMovement : MonoBehaviour
         dir = moveAction.action.ReadValue<Vector2>();
      //   Debug.Log(dir);
 
-        rb.AddForce( dir * speed);
+        rb.AddForce(dir * speed);
         rotateBody();
+
+        tankSpeed = rb.linearVelocity.magnitude;
     }
 
     private void rotateBody()
@@ -36,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
       
         
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            Debug.Log(angle);
+           // Debug.Log(angle);
             float targetAngle = angle - 90f;
             float smoothedAngle = Mathf.LerpAngle(rb.rotation, targetAngle, rotationSpeed * Time.deltaTime);
 
