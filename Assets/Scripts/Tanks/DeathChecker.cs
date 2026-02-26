@@ -24,9 +24,6 @@ public class DeathChecker : MonoBehaviour
             if (col.gameObject.GetComponent<Bullet>().getLastHit() != this.transform.root.gameObject &&
                 col.gameObject.GetComponent<Bullet>().getLastHit() != null)
             {
-                Debug.Log(this.transform.root.gameObject + " hit!");
-                Destroy(this.transform.root.gameObject);
-
                 //set score code here
 
                 switch (GetComponentInParent<PlayerMovement>().getTeamCode())
@@ -38,8 +35,20 @@ public class DeathChecker : MonoBehaviour
                     FindAnyObjectByType<Scorekeeper>().p2Killed();
                         break;
             }
-                
+
                 //set respawn code here, maybe send a signal to a manager that instantiates at a position
+                if (GameObject.Find("Scorekeeper").TryGetComponent<Scorekeeper>(out Scorekeeper keeper))
+                { 
+                    if(keeper.p1Point == 0 || keeper.p2Point == 0)
+                        Debug.Log("Game Over!!");
+                    else
+                    {
+                        var g = GameObject.Instantiate(this.transform.root.gameObject);
+                        g.transform.position = Vector3.zero; //temporary
+                    }
+                }
+                Debug.Log(this.transform.root.gameObject + " hit!");
+                Destroy(this.transform.root.gameObject);
             }
         }
     }
