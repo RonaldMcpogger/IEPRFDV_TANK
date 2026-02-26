@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     float maxSpeed = 20f;
 
+    GameObject lastHit;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,13 +27,17 @@ public class Bullet : MonoBehaviour
         cooldown -= Time.fixedDeltaTime;
     }
 
-    public void addForceToBullet(Vector3 angle, float speed)
+    public void addForceToBullet(Vector3 angle, float speed, GameObject hitter)
     {
         if (cooldown < 0)
             rb.AddForce(angle * speed * 100);
 
         cooldown = .5f;
         //Debug.Log("adding force to bullet: " + angle + ", speed:" +  speed);
+
+        lastHit = hitter;
     }
+
+    public GameObject getLastHit() { return lastHit; }
 }
 

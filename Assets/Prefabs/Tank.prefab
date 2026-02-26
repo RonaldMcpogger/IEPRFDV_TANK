@@ -135,6 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684622314750714936}
   - component: {fileID: 1977971454896940052}
+  - component: {fileID: 606234129865023475}
   m_Layer: 0
   m_Name: Turret hitbox
   m_TagString: Untagged
@@ -187,7 +188,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -203,6 +204,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &606234129865023475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4364666884032973703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddef1a9628f8fdb4eba72130cdf25f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurretHitbox
+  PMovement: {fileID: 0}
 --- !u!1 &8292057671107677370
 GameObject:
   m_ObjectHideFlags: 0

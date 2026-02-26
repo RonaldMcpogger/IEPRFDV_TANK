@@ -1,15 +1,24 @@
 {
     "version": 1,
-    "name": "PlayerTankInput",
+    "name": "PlayerTankInput 1",
     "maps": [
         {
-            "name": "Player1TankControl",
-            "id": "08e9dd67-9b1b-46a4-a765-b3e8c1aebf1f",
+            "name": "Player2TankControl",
+            "id": "54050a78-b02c-4a1e-ac84-aa006d18f57f",
             "actions": [
                 {
                     "name": "Move",
                     "type": "Value",
-                    "id": "a6c336f3-24a2-44d0-a0ca-6eb86406c000",
+                    "id": "cfe06d6c-4f80-4e4f-86c6-5d7300056f87",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Aim",
+                    "type": "Value",
+                    "id": "e3f12d1e-ef09-4e62-841d-9106b1c5519d",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -18,59 +27,26 @@
             ],
             "bindings": [
                 {
-                    "name": "2D Vector",
-                    "id": "92b03ead-65d3-4989-9948-5b446b0124a2",
-                    "path": "2DVector(mode=1)",
+                    "name": "",
+                    "id": "9a8238c5-652b-4ca2-ad5e-d496ad965a0e",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "2b416367-3e90-4bee-af90-a039d2581bbd",
-                    "path": "<Keyboard>/w",
+                    "name": "",
+                    "id": "6a948e0e-33f6-4ba9-86a9-cdcb98b781ff",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";KeyboardMouse",
-                    "action": "Move",
+                    "groups": "",
+                    "action": "Aim",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "41c7fe61-629b-4fff-840f-619a64062a8a",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";KeyboardMouse",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "76efe8dc-5a7c-4635-8af3-889daafc105e",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";KeyboardMouse",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "c9309c1b-bb36-4c5b-810b-9ad53cb4b12c",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";KeyboardMouse",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }

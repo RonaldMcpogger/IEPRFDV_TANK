@@ -20,11 +20,11 @@ public class TurretHitbox : MonoBehaviour
         // Debug.Log("entered turret hitbox");
         if (other.CompareTag("Bullet"))
         {
-            Debug.Log(other.gameObject.name);
+            //Debug.Log(other.gameObject.name);
             float speed = GetComponentInParent<PlayerAimController>().getSpeed() + PMovement.GetComponent<PlayerMovement>().tankSpeed;
 
 
-            other.gameObject.GetComponent<Bullet>().addForceToBullet(-transform.right, speed);
+            other.gameObject.GetComponent<Bullet>().addForceToBullet(-transform.right, speed, this.transform.root.gameObject);
 
 
             Debug.Log(speed);

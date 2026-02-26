@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8686578752931901231
+--- !u!1 &6934609524504594981
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5609127811154416879}
-  - component: {fileID: 1450791420514685913}
-  - component: {fileID: 4728242127636226904}
+  - component: {fileID: 1302735531286555115}
+  - component: {fileID: 5138747301546571676}
+  - component: {fileID: 8678855768747446658}
   m_Layer: 0
   m_Name: DeathHurtbox
   m_TagString: Untagged
@@ -18,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5609127811154416879
+--- !u!4 &1302735531286555115
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8686578752931901231}
+  m_GameObject: {fileID: 6934609524504594981}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1211771312650288236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1450791420514685913
+--- !u!61 &5138747301546571676
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8686578752931901231}
+  m_GameObject: {fileID: 6934609524504594981}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -79,13 +79,13 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3, y: 1.3}
   m_EdgeRadius: 0
---- !u!114 &4728242127636226904
+--- !u!114 &8678855768747446658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8686578752931901231}
+  m_GameObject: {fileID: 6934609524504594981}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e088273ec21902488cef9a69e657588, type: 3}
@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 2704749399213466697}
   - component: {fileID: 2031504110788706216}
   - component: {fileID: 6859741126807828022}
-  - component: {fileID: 5508711365990238932}
+  - component: {fileID: 4584940036302340423}
   m_Layer: 0
-  m_Name: Player
+  m_Name: ControllerPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,12 +197,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47dc737fa599902449bf70ef34a2b9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  controls: {fileID: -944628639613478452, guid: 9b32dc553c43fe841afa8bb69bac3786, type: 3}
-  mapName: Player1TankControl
+  controls: {fileID: -944628639613478452, guid: b041b78fcc7766a4aa08a29e43e9fa6e, type: 3}
+  mapName: Player2TankControl
   speed: 10
   rb: {fileID: 2704749399213466697}
   rotationSpeed: 2
   tankSpeed: 0
+  teamCode: 1
 --- !u!61 &6859741126807828022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5508711365990238932
+--- !u!114 &4584940036302340423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,11 +259,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8963583352648314411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce896be3da580b14bae19c2223a16808, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c99e061daa04da4cb95d62b3b1beaf1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAimController
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAimController2
   Turret: {fileID: 5676344689980769209}
-  angleOffset: 80
+  angleOffset: 0
+  Turret: {fileID: 5676344689980769209}
+  angleOffset: 0
+  controls: {fileID: -944628639613478452, guid: b041b78fcc7766a4aa08a29e43e9fa6e, type: 3}
+  mapName: Player2TankControl
 --- !u!1001 &4455506915817393923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,7 +329,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3243770930749567855, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5609127811154416879}
+      addedObject: {fileID: 1302735531286555115}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
 --- !u!4 &1211771312650288236 stripped
