@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2704749399213466697}
   - component: {fileID: 2031504110788706216}
   - component: {fileID: 6859741126807828022}
-  - component: {fileID: 4584940036302340423}
+  - component: {fileID: 7987979928311074646}
   m_Layer: 0
   m_Name: ControllerPlayer
   m_TagString: Untagged
@@ -250,7 +250,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4584940036302340423
+--- !u!114 &7987979928311074646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,9 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAimController2
   Turret: {fileID: 5676344689980769209}
-  angleOffset: 0
-  Turret: {fileID: 5676344689980769209}
-  angleOffset: 0
+  angleOffset: 90
   controls: {fileID: -944628639613478452, guid: b041b78fcc7766a4aa08a29e43e9fa6e, type: 3}
   mapName: Player2TankControl
 --- !u!1001 &4455506915817393923

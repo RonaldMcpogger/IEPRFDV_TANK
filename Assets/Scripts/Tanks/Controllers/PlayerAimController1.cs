@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class PlayerAimController2 : PlayerAimController
+public class PlayerAimController2 : MonoBehaviour, PlayerAimController
 {
     [SerializeField] private GameObject Turret;
     [SerializeField] private float angleOffset; // New serialized field for angle offset
@@ -16,7 +16,7 @@ public class PlayerAimController2 : PlayerAimController
         turretAction.Enable();
     }
 
-    void Update()
+    public void Update()
     {
         //Debug.Log(turretAction.ReadValue<Vector2>());
         // Early exit if Camera.main or Turret is not assigned
@@ -28,9 +28,9 @@ public class PlayerAimController2 : PlayerAimController
 
        Vector2 dir = turretAction.ReadValue<Vector2>();
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        //Debug.Log(angle);
+        Debug.Log(angle);
 
-
+        angle += 180;
         Turret.transform.up = dir;
         speed = (angle- lastAngle)/Time.deltaTime;
         lastAngle = angle;

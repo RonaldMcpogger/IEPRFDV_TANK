@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+
     }
 
     private void FixedUpdate()
@@ -30,12 +30,14 @@ public class Bullet : MonoBehaviour
     public void addForceToBullet(Vector3 angle, float speed, GameObject hitter)
     {
         if (cooldown < 0)
-            rb.AddForce(angle * speed * 100);
-
+        {
+            rb.AddForce(angle * speed * 1);
+            lastHit = hitter;
+        }
         cooldown = .5f;
         //Debug.Log("adding force to bullet: " + angle + ", speed:" +  speed);
 
-        lastHit = hitter;
+
     }
 
     public GameObject getLastHit() { return lastHit; }

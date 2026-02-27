@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2704749399213466697}
   - component: {fileID: 2031504110788706216}
   - component: {fileID: 6859741126807828022}
-  - component: {fileID: 5508711365990238932}
+  - component: {fileID: 4652428963672558462}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -203,6 +203,7 @@ MonoBehaviour:
   rb: {fileID: 2704749399213466697}
   rotationSpeed: 2
   tankSpeed: 0
+  teamCode: 0
 --- !u!61 &6859741126807828022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5508711365990238932
+--- !u!114 &4652428963672558462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,11 +259,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8963583352648314411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce896be3da580b14bae19c2223a16808, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cdfeca6b27f4dd40ad5d32311abed31, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAimController
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   Turret: {fileID: 5676344689980769209}
-  angleOffset: 80
+  angleOffset: 90
 --- !u!1001 &4455506915817393923
 PrefabInstance:
   m_ObjectHideFlags: 0
