@@ -39,6 +39,10 @@ public class Bullet : MonoBehaviour
 
 
     }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        GlobalScreenShake.Instance.TriggerShake(0.01f, 0.01f);
+    }
 
     public GameObject getLastHit() { return lastHit; }
 }
