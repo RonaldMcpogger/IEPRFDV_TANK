@@ -44,7 +44,7 @@ public class GlobalScreenShake : MonoBehaviour
     {
         if(start)
         {
-            Debug.Log("Screen Shake Triggered");
+            
             start = false;
           StartCoroutine(Shake(duration, magnitude));
 

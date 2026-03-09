@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +34,7 @@ public class Scorekeeper : MonoBehaviour
             g.name = "One's Heart " + i;
             if (g.TryGetComponent<RectTransform>(out RectTransform transform))
             {
-                transform.anchoredPosition += new Vector2((53 * i), 0);
+                transform.anchoredPosition += new UnityEngine.Vector2((53 * i), 0);
             }
             lives.Add(g);
         }
@@ -45,7 +46,7 @@ public class Scorekeeper : MonoBehaviour
             GameObject g = GameObject.Instantiate(anchor2, anchorParent2.transform);
             g.name = "Two's Heart " + i;
             if (g.TryGetComponent<RectTransform>(out RectTransform transform))
-                transform.anchoredPosition += new Vector2(-(53 * i), 0);
+                transform.anchoredPosition += new UnityEngine.Vector2(-(53 * i), 0);
             lives2.Add(g);
         }
         anchor2.SetActive(false);
@@ -59,7 +60,7 @@ public class Scorekeeper : MonoBehaviour
         {
             if(p1Point > 0 && lives.Last().TryGetComponent<RawImage>(out RawImage img))
             {
-                img.color = Color.white;
+                img.color = new Color(0,0,0,0);
                 lives.Remove(lives.Last());
             }
         }
@@ -76,7 +77,7 @@ public class Scorekeeper : MonoBehaviour
         {
             if (p2Point > 0 && lives2.Last().TryGetComponent<RawImage>(out RawImage img))
             {
-                img.color = Color.white;
+                img.color = new Color(0, 0, 0, 0);
                 lives2.Remove(lives2.Last());
             }
         }

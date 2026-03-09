@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rb;
     float cooldown;
     [SerializeField]
-    float maxSpeed = 20f;
+    float maxSpeed = 30f;
 
     GameObject lastHit;
 

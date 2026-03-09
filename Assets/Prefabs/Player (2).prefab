@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   controls: {fileID: -944628639613478452, guid: b041b78fcc7766a4aa08a29e43e9fa6e, type: 3}
   mapName: Player2TankControl
-  speed: 10
+  speed: 6
   rb: {fileID: 3514748975668497368}
   rotationSpeed: 2
   tankSpeed: 0
@@ -293,7 +293,7 @@ Transform:
   m_GameObject: {fileID: 3213966748100772156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e088273ec21902488cef9a69e657588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathChecker
+  spawnLoc: {x: 0, y: 0}
 --- !u!1 &4437394801974948617
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,19 +787,19 @@ PrefabInstance:
       objectReference: {fileID: 1834667323007160925}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.7888756
+      value: 9.098864
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.547562
+      value: 4.7892084
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -873,6 +874,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3128407039372652497, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128407039372652497, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7630536626970368372, guid: 370b6cb488a35a5409a3f59592ed6f36, type: 3}
@@ -924,6 +929,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2147962842331679630, guid: 9be4be70aeb813848b2b443ef1a727a1, type: 3}
+    - target: {fileID: 5469177368117932622, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3
@@ -938,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.91
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalRotation.w
