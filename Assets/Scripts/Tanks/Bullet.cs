@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
@@ -8,7 +9,12 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     float maxSpeed = 30f;
 
+    [SerializeField] private SpriteRenderer bulletImage;
+    [SerializeField] private TrailRenderer bulletTrail;
+
     GameObject lastHit;
+
+
 
     private void Start()
     {
@@ -29,18 +35,39 @@ public class Bullet : MonoBehaviour
 
     public void addForceToBullet(Vector3 angle, float speed, GameObject hitter)
     {
-        if (cooldown < 0)
+        if (cooldown < 0 && speed >3)
         {
             rb.AddForce(angle * speed * 1);
             lastHit = hitter;
+            if (lastHit.name == "Player")
+            {
+                bulletImage.color = Color.blue;
+
+                bulletTrail.startColor = Color.blue;
+            }
+            else if(lastHit.name == "Player (2)")
+            {
+                
+                bulletImage.color = Color.red;
+                bulletTrail.startColor = Color.red;
+            }
         }
-        cooldown = .5f;
+        cooldown = .2f;
         //Debug.Log("adding force to bullet: " + angle + ", speed:" +  speed);
 
 
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (collision.gameObject != lastHit)
+            {
+                GlobalScreenShake.Instance.TriggerShake(0.5f, 1f);
+                this.rb.linearVelocity = Vector2.zero;
+            } 
+        }
+        else
         GlobalScreenShake.Instance.TriggerShake(0.01f, 0.01f);
     }
 

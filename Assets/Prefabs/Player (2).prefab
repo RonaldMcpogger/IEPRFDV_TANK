@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8028185659188369932}
   m_Layer: 0
   m_Name: Player (2)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,6 +358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathChecker
   spawnLoc: {x: 0, y: 0}
+  spawnPos: {x: 0, y: 0}
+  TankBod: {fileID: 8078749467005338201}
+  Turret: {fileID: 2080898060672408599}
 --- !u!1 &4437394801974948617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1036,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5469177368117932622, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
   m_PrefabInstance: {fileID: 6590787667319434632}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &2080898060672408599 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5158868649170448799, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
+  m_PrefabInstance: {fileID: 6590787667319434632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2910557851752898866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8292057671107677370, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
@@ -1120,6 +1128,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!212 &8078749467005338201 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3128407039372652497, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
+  m_PrefabInstance: {fileID: 6590787667319434632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8535198770324397799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3243770930749567855, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}

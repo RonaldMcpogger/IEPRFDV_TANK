@@ -4,7 +4,11 @@ using UnityEngine;
 public class DeathChecker : MonoBehaviour
 
 {
+    float deathTimer = 0;
     public Vector2 spawnLoc;
+    public Vector2 spawnPos;
+    public SpriteRenderer TankBod;
+    public SpriteRenderer Turret;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,20 +18,26 @@ public class DeathChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        deathTimer -= Time.deltaTime;
+        if ((deathTimer <0))
+        {
+            TankBod.color = new Color(1, 1, 1, 1);
+            Turret.color = new Color(1, 1, 1, 1);
+            Debug.Log("cooldown gone");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         
-        if (col.CompareTag("Bullet"))
+        if (col.CompareTag("Bullet") && deathTimer< 0)
         {
             Debug.Log("last hit was" + col.gameObject.GetComponent<Bullet>().getLastHit());
             if (col.gameObject.GetComponent<Bullet>().getLastHit() != this.transform.root.gameObject &&
                 col.gameObject.GetComponent<Bullet>().getLastHit() != null)
             {
                 //set score code here
-
+                
                 switch (GetComponentInParent<PlayerMovement>().getTeamCode())
                 {
                     case 0:
@@ -45,19 +55,22 @@ public class DeathChecker : MonoBehaviour
                     {
                         // insert UI code that shows Game Over
                         Debug.Log("Game Over!!");
-                        Destroy(this.transform.root.gameObject);
+                        gameObject.transform.root.gameObject.SetActive(false);
                     }
                         
                     
                     else
                     {
-                       // var g = GameObject.Instantiate(this.transform.root.gameObject);
-
+                        // var g = GameObject.Instantiate(this.transform.root.gameObject);
+                        deathTimer = 4f;
 
                        this.transform.root.position = spawnLoc; //temporary
+                        TankBod.color = new Color(0.4f, 0.4f, 0.4f, 0.5f);
+                        Turret.color = new Color(0.4f, 0.4f, 0.4f, 0.5f);
+                        Debug.Log(this.transform.root.gameObject + " hit!");
                     }
                 }
-                Debug.Log(this.transform.root.gameObject + " hit!");
+              
               
             }
         }

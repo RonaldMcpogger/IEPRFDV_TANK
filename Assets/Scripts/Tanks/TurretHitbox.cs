@@ -27,7 +27,7 @@ public class TurretHitbox : MonoBehaviour
             other.gameObject.GetComponent<Bullet>().addForceToBullet(-transform.right, speed, this.transform.root.gameObject);
 
 
-            Debug.Log(speed);
+            Debug.Log(this.transform.root.name+" "+speed);
         }
     }
 }

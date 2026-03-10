@@ -17,6 +17,7 @@ public class Scorekeeper : MonoBehaviour
     [SerializeField] GameObject anchor2;
     [SerializeField] GameObject anchorParent2;
     [SerializeField] List<GameObject> lives2;
+    [SerializeField] Texture brokenHeart;
 
 
     [SerializeField] bool debug = true;
@@ -60,7 +61,8 @@ public class Scorekeeper : MonoBehaviour
         {
             if(p1Point > 0 && lives.Last().TryGetComponent<RawImage>(out RawImage img))
             {
-                img.color = new Color(0,0,0,0);
+                img.texture = brokenHeart;
+                //img.color = new Color(0,0,0,0);
                 lives.Remove(lives.Last());
             }
         }
@@ -77,7 +79,8 @@ public class Scorekeeper : MonoBehaviour
         {
             if (p2Point > 0 && lives2.Last().TryGetComponent<RawImage>(out RawImage img))
             {
-                img.color = new Color(0, 0, 0, 0);
+                img.texture = brokenHeart;
+                //img.color = new Color(0, 0, 0, 0);
                 lives2.Remove(lives2.Last());
             }
         }

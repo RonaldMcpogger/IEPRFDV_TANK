@@ -678,6 +678,7 @@ MonoBehaviour:
   anchor2: {fileID: 811818937}
   anchorParent2: {fileID: 811818938}
   lives2: []
+  brokenHeart: {fileID: 2800000, guid: b57fc17b86f04d048aaae5e669879b50, type: 3}
   debug: 0
   initialPoints: 3
 --- !u!1001 &467654225
@@ -840,7 +841,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0.8335519, b: 0, a: 1}
@@ -862,7 +863,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2828, y: 1.2828, z: 1.2828}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1378350622}
@@ -917,6 +918,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   maxSpeed: 20
+  bulletImage: {fileID: 538133235}
+  bulletTrail: {fileID: 1378350623}
 --- !u!1 &547140507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8078749467005338201, guid: 93ef8df2d917ede4fa48802409f0035a, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
