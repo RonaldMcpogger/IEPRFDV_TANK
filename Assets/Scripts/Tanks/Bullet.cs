@@ -19,6 +19,8 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //Vector2 randomDirection = Random.insideUnitCircle.normalized;
+        //rb.AddForce(randomDirection*20,ForceMode2D.Impulse);
 
     }
 
