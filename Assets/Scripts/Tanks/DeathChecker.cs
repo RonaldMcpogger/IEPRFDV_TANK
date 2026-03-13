@@ -63,8 +63,9 @@ public class DeathChecker : MonoBehaviour
                     {
                         // var g = GameObject.Instantiate(this.transform.root.gameObject);
                         deathTimer = 4f;
+                        GlobalScreenShake.Instance.TriggerShake(1, 1f);
 
-                       this.transform.root.position = spawnLoc; //temporary
+                        this.transform.root.position = spawnLoc; //temporary
                         TankBod.color = new Color(0.4f, 0.4f, 0.4f, 0.5f);
                         Turret.color = new Color(0.4f, 0.4f, 0.4f, 0.5f);
                         Debug.Log(this.transform.root.gameObject + " hit!");

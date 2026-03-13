@@ -225,7 +225,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.19}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -235,7 +235,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.31, y: 1.32}
   m_EdgeRadius: 0
 --- !u!114 &4556945496012419335
 MonoBehaviour:
@@ -788,23 +788,23 @@ PrefabInstance:
       objectReference: {fileID: 3899496893971023205}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.1431694
+      value: 12.03361
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.5508122
+      value: 5.7470503
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2828
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.94
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 684622314750714936, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -944,35 +944,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5469177368117932622, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.79335415
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5469177368117932622, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5469177368117932622, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5469177368117932622, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.6087605
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5469177368117932622, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -989,6 +989,10 @@ PrefabInstance:
     - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786859988672846010, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7552417065036694599, guid: e0ed4f57c3548fc4887af5ed8d22665c, type: 3}
       propertyPath: m_LocalScale.x

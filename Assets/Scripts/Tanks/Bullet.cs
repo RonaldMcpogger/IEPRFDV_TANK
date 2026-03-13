@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rb;
     float cooldown;
     [SerializeField]
-    float maxSpeed = 30f;
+    float maxSpeed = 20f;
 
     [SerializeField] private SpriteRenderer bulletImage;
     [SerializeField] private TrailRenderer bulletTrail;
@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
 
     public void addForceToBullet(Vector3 angle, float speed, GameObject hitter)
     {
-        if (cooldown < 0 && speed >3)
+        if (cooldown < 0 )
         {
             rb.AddForce(angle * speed * 1);
             lastHit = hitter;
@@ -52,22 +52,14 @@ public class Bullet : MonoBehaviour
                 bulletTrail.startColor = Color.red;
             }
         }
-        cooldown = .2f;
+        cooldown = .05f;
         //Debug.Log("adding force to bullet: " + angle + ", speed:" +  speed);
 
 
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            if (collision.gameObject != lastHit)
-            {
-                GlobalScreenShake.Instance.TriggerShake(0.5f, 1f);
-                this.rb.linearVelocity = Vector2.zero;
-            } 
-        }
-        else
+     
         GlobalScreenShake.Instance.TriggerShake(0.01f, 0.01f);
     }
 

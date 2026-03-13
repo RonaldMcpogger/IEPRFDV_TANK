@@ -729,6 +729,7 @@ MonoBehaviour:
   anchor2: {fileID: 1974885165}
   anchorParent2: {fileID: 175905795}
   lives2: []
+  brokenHeart: {fileID: 0}
   debug: 0
   initialPoints: 3
 --- !u!1001 &467654225
@@ -1041,6 +1042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   maxSpeed: 20
+  bulletImage: {fileID: 0}
+  bulletTrail: {fileID: 0}
 --- !u!4 &543506342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8517230733760265549, guid: 6efecfb3f7482e44ba48f8e37f6f3a0d, type: 3}

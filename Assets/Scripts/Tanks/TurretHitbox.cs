@@ -24,7 +24,7 @@ public class TurretHitbox : MonoBehaviour
             float speed = GetComponentInParent<PlayerAimController>().getSpeed() + PMovement.GetComponent<PlayerMovement>().tankSpeed;
 
 
-            other.gameObject.GetComponent<Bullet>().addForceToBullet(-transform.right, speed, this.transform.root.gameObject);
+            other.gameObject.GetComponent<Bullet>().addForceToBullet(transform.right + transform.up, speed, this.transform.root.gameObject);
 
 
             Debug.Log(this.transform.root.name+" "+speed);
