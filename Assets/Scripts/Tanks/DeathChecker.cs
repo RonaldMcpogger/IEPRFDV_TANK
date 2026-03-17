@@ -23,7 +23,7 @@ public class DeathChecker : MonoBehaviour
         {
             TankBod.color = new Color(1, 1, 1, 1);
             Turret.color = new Color(1, 1, 1, 1);
-            Debug.Log("cooldown gone");
+            //Debug.Log("cooldown gone");
         }
     }
 
