@@ -87,7 +87,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";KeyboardMouse",
                     "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
