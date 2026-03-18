@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float targetAngle;
     [SerializeField] private int teamCode;
-
+    [SerializeField] private powerType currPower = powerType.none;
     void Start()
     {
         moveAction = controls.FindActionMap(mapName).FindAction("Move");
@@ -71,5 +71,13 @@ public class PlayerMovement : MonoBehaviour
     public int getTeamCode()
     {
         return teamCode;
+    }
+    public void setPower(powerType power)
+    {
+        currPower = power;
+    }
+    public powerType getPower()
+    {
+        return currPower;
     }
 }
