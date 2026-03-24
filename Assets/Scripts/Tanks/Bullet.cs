@@ -66,5 +66,14 @@ public class Bullet : MonoBehaviour
     }
 
     public GameObject getLastHit() { return lastHit; }
+
+    public void resetHit()
+    {
+        bulletImage.color = Color.yellow;
+
+        bulletTrail.startColor = Color.yellow;
+
+        lastHit = null;
+    }
 }
 
