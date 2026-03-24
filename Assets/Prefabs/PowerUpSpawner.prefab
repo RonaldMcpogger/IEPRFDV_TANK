@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerupSpawner
   spawnableArea: {fileID: 8876132968937765863}
-  powerupPrefab: {fileID: 8370367998984277124, guid: a22c4ca61d17f084f9c6597f3dd0d841, type: 3}
+  powerupPrefab: {fileID: 6338183691816675855, guid: 0e4980a3fffc174448d8989ad98c7c54, type: 3}
 --- !u!61 &8876132968937765863
 BoxCollider2D:
   m_ObjectHideFlags: 0

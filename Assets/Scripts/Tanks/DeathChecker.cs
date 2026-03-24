@@ -48,6 +48,8 @@ public class DeathChecker : MonoBehaviour
                         break;
             }
 
+                col.gameObject.GetComponent<Bullet>().resetHit();
+
                 //set respawn code here, maybe send a signal to a manager that instantiates at a position
                 if (GameObject.Find("Scorekeeper").TryGetComponent<Scorekeeper>(out Scorekeeper keeper))
                 { 
