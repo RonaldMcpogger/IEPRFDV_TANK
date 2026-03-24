@@ -18,7 +18,7 @@ public class Scorekeeper : MonoBehaviour
     [SerializeField] GameObject anchorParent2;
     [SerializeField] List<GameObject> lives2;
     [SerializeField] Texture brokenHeart;
-
+    [SerializeField] GameObject winScreen;
 
     [SerializeField] bool debug = true;
 
@@ -26,6 +26,7 @@ public class Scorekeeper : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        this.winScreen.SetActive(false);
         p1Point = initialPoints;
         p2Point = initialPoints;
 
@@ -87,4 +88,13 @@ public class Scorekeeper : MonoBehaviour
 
         p2Point--;
     }
+
+    private void FixedUpdate()
+    {
+        if (p1Point <= 0 || p2Point <= 0)
+        {
+            winScreen.SetActive(true);
+        }
+    }
 }
+

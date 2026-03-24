@@ -27,7 +27,7 @@ public class GlobalScreenShake : MonoBehaviour
             // Otherwise, set this as the instance.
             Instance = this;
             // Optionally, make the object persistent across scene loads.
-            DontDestroyOnLoad(this);
+           // DontDestroyOnLoad(this);
         }
     }
 

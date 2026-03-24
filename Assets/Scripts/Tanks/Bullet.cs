@@ -47,34 +47,56 @@ public class Bullet : MonoBehaviour
     {
         if (cooldown < 0 )
         {
-            this.addSpeed(angle, speed);
+            this.rb.AddForce(angle * speed * 1);
             lastHit = hitter;
             
-            /// NOTE FIX THIS POWEREUP SPLITTER
-                if (hitter.gameObject.GetComponent<PlayerMovement>().getPower()==powerType.BULLETSPLIT)
-                {
-                    for(int i =0; i<3; i++)
-                    {
-                        var newBullet = Instantiate(this.transform.root.gameObject); // spawn clone of bullet
-                        newBullet.GetComponent<Bullet>().isCore = false;
-                        newBullet.GetComponent<Bullet>().addSpeed(angle, speed);
+            ///// POWERUP FUNCTION spawn bullet
+            //    if (hitter.gameObject.GetComponent<PlayerMovement>().getPower()==powerType.BULLETSPLIT &&isCore)
+            //    {
+            //           hitter.gameObject.GetComponent<PlayerMovement>().setPower(powerType.none);
+            //         for (int i =0; i<4; i++)
+            //        {
+            //               Vector3 bulletLoc = this.transform.position;
+            //        var newBullet = Instantiate(this.transform.root.gameObject,new Vector3(bulletLoc.x +5.5f, bulletLoc.y, bulletLoc.z),new Quaternion(0,0,0,0)); // spawn clone of bullet
+            //            newBullet.GetComponent<Bullet>().isCore = false;
+            //            newBullet.GetComponent<Bullet>().addSpeed(angle*2 , speed+ 2);
+            //            newBullet.GetComponent<Bullet>().lastHit = hitter;
 
 
-                    }
-                }
-            
-
-            if (lastHit.name == "Player")
-            {
-                bulletImage.color = Color.blue;
-
-                bulletTrail.startColor = Color.blue;
-            }
-            else if(lastHit.name == "Player (2)")
-            {
+    
+            //         }
                 
-                bulletImage.color = Color.red;
-                bulletTrail.startColor = Color.red;
+            //    }
+
+            if (!isCore)
+            {
+                if (lastHit.name == "Player")
+                {
+                    bulletImage.color = Color.cyan;
+
+                    bulletTrail.startColor = Color.cyan;
+                }
+                else if (lastHit.name == "Player (2)")
+                {
+
+                    bulletImage.color = Color.orange;
+                    bulletTrail.startColor = Color.orange;
+                }
+            }
+            else
+            {
+                if (lastHit.name == "Player")
+                {
+                    bulletImage.color = Color.blue;
+
+                    bulletTrail.startColor = Color.blue;
+                }
+                else if (lastHit.name == "Player (2)")
+                {
+
+                    bulletImage.color = Color.red;
+                    bulletTrail.startColor = Color.red;
+                }
             }
         }
         cooldown = .05f;
@@ -84,9 +106,13 @@ public class Bullet : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-     if(collision.gameObject.CompareTag("Wall") && !isCore)
+     if( !isCore)
         {
-            Destroy(this.gameObject);
+           lifeTime-=1;
+              if(lifeTime <= 0)
+                {
+                 Destroy(this.gameObject);
+            }
         }
         GlobalScreenShake.Instance.TriggerShake(0.01f, 0.01f);
     }
