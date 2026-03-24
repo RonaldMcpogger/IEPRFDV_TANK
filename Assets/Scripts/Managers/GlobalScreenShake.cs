@@ -65,7 +65,7 @@ public class GlobalScreenShake : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float strength = ShakeStr.Evaluate(elapsed / duration);
+            float strength = ShakeStr.Evaluate(elapsed / duration) * 0.4f;
 
        
             cam.transform.localPosition = new Vector3(originalPos.x + Random.insideUnitSphere.x * strength,
