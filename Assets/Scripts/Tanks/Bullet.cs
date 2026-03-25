@@ -121,9 +121,9 @@ public class Bullet : MonoBehaviour
 
     public void resetHit()
     {
-        bulletImage.color = Color.yellow;
+        bulletImage.color = new Color(0.6901961f, 0.5215687f, 0.654902f,1);
 
-        bulletTrail.startColor = Color.yellow;
+        bulletTrail.startColor = new Color(0.6901961f, 0.5215687f, 0.654902f, 1);
 
         lastHit = null;
     }

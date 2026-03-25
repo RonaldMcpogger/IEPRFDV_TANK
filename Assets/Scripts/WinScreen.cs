@@ -8,20 +8,32 @@ public class WinScreen : MonoBehaviour
     [SerializeField] Scorekeeper scorekeeper;
     void Start()
     {
-        if (scorekeeper.p1Point <= 0)
-        {
-            WinText.text = "Player 1 Wins!";
-        }
-        else if (scorekeeper.p2Point <= 0)
-        {
-            WinText.text = "Player 2 Wins!";
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
+       
         Time.timeScale = 0;
 
+    }
+    public void CallEnd( int flag)
+    {
+       switch(flag)
+        {
+            case 1:
+                WinText.text = "Player 1 Wins!";
+                break;
+                case 2:
+                WinText.text = "Player 2 Wins!";
+                break;
+        }
+        
+            
+        
+       
+            
+        
     }
 }

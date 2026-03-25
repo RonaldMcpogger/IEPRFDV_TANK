@@ -27,6 +27,7 @@ public class Scorekeeper : MonoBehaviour
     void Start()
     {
         this.winScreen.SetActive(false);
+
         p1Point = initialPoints;
         p2Point = initialPoints;
 
@@ -94,6 +95,16 @@ public class Scorekeeper : MonoBehaviour
         if (p1Point <= 0 || p2Point <= 0)
         {
             winScreen.SetActive(true);
+            if (p1Point <= 0)
+            {
+                winScreen.GetComponentInChildren<WinScreen>().CallEnd(2);
+            }
+            else if (p2Point <= 0)
+            {
+                winScreen.GetComponentInChildren<WinScreen>().CallEnd(1);
+
+            }
+
         }
     }
 }
