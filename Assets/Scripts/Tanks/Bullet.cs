@@ -99,7 +99,7 @@ public class Bullet : MonoBehaviour
                 }
             }
         }
-        cooldown = .05f;
+        cooldown = .5f;
         //Debug.Log("adding force to bullet: " + angle + ", speed:" +  speed);
 
 

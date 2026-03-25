@@ -112,7 +112,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.95343006, b: 0.0056602955, a: 1}
+      key0: {r: 0.69411767, g: 0.52156866, b: 0.65882355, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -237,7 +237,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.8335519, b: 0, a: 1}
+  m_Color: {r: 0.690566, g: 0.5198789, b: 0.65602493, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -324,3 +324,4 @@ MonoBehaviour:
   maxSpeed: 28
   bulletImage: {fileID: 6488619675964593195}
   bulletTrail: {fileID: 3189009752066683438}
+  isCore: 1
